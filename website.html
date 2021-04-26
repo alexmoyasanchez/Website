@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  	<title>REPOSITORIS GITHUB</title>
+    <meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">  
+</script>
+<script>
+$(document).ready(function() {
+	$("#button").click(function() {
+        var user = document.getElementById("user").value;
+        var url = "http://api.github.com/users/" + user + "/repos";
+        $("#repository").text(data.public_repos)
+        $("#description").text(data.url)
+        $("#followers").text(data.followers)
+        }, "json");
+      });
+    });
+</script>
+</head>
+<body>
+	<div class="container-fluid pt-3">
+  	<h1 class="text-info">My First Bootstrap Page</h1>
+  	<p>Página para ver los repositorios de cierto usuario de github</p>  
+
+    <div class="form-group">
+      <label for="usr">Introduce el nombre del usuario:</label>
+      <input type="text" name="usr" id="usr">
+    </div>
+   	
+    <button type="enter" class="btn btn-primary" id="boton">Submit</button>
+ 
+    <br/>
+    <br/>        
+  	<table class="table table-striped" id="tabla">
+    <thead>
+      <tr>
+        <th>Repository</th>
+        <th>Description</th>
+        <th>Followers</th>
+      </tr>
+    </thead>
+  	</table>
+	</div>
+</body>
+</html>
